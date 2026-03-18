@@ -1,0 +1,76 @@
+.container {
+  height: 100vh;
+  background: url("/bg.jpg") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  width: 360px;
+  padding: 40px 30px;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+}
+
+.input::placeholder {
+  color: #ccc;
+}
+
+.input:focus {
+  outline: none;
+  border-color: white;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.bottom span {
+  cursor: pointer;
+}
+
+.msg {
+  margin-top: 10px;
+  color: red;
+}
