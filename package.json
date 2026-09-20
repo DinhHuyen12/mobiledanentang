@@ -1,0 +1,34 @@
+{
+  "name": "doan3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "db:ensure-extended-schema": "node scripts/ensure-extended-schema.js",
+    "db:ensure-attendance-schema": "node scripts/ensure-attendance-schema.js",
+    "db:seed-more-demo": "node scripts/seed-more-demo-data.js",
+    "db:seed-realistic-demo": "node scripts/seed-realistic-demo-data.js",
+    "test": "node scripts/smoke-test.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.1",
+    "mysql2": "^3.19.1",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^8.0.2",
+    "xlsx": "^0.18.5"
+  },
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
