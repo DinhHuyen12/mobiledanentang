@@ -120,10 +120,84 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html,
   body {
-    @apply bg-background text-foreground;
+    @apply min-h-full text-foreground antialiased;
+    background:
+      radial-gradient(circle at top left, rgba(14, 165, 233, 0.1), transparent 24%),
+      radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent 22%),
+      linear-gradient(180deg, #f8fbff 0%, #eef4fb 44%, #e9f0f8 100%);
   }
+
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
+  }
+
+  body {
+    @apply selection:bg-sky-200 selection:text-slate-900;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-300;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply min-h-screen;
+  }
+
+  .page-header {
+    @apply sticky top-0 z-20 border-b border-white/70 bg-white/78 backdrop-blur-xl;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  }
+
+  .page-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .surface-card {
+    @apply rounded-3xl border border-white/70 bg-white/88 shadow-[0_20px_55px_rgba(15,23,42,0.08)] backdrop-blur;
+  }
+
+  .soft-panel {
+    @apply rounded-[2rem] border border-white/60 bg-white/72 shadow-[0_16px_40px_rgba(15,23,42,0.06)] backdrop-blur;
+  }
+
+  .top-nav-chip {
+    @apply inline-flex items-center gap-2 rounded-2xl border border-white/70 bg-white/80 px-4 py-2.5 text-sm font-medium text-slate-600 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-slate-900 hover:shadow-md;
+  }
+
+  .top-nav-chip-active {
+    @apply border-transparent text-white shadow-lg;
+  }
+
+  .sidebar-shell {
+    @apply border-r border-white/10 bg-slate-950/96 text-white;
+    background-image:
+      radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 26%),
+      radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.16), transparent 24%);
+  }
+
+  .sidebar-link {
+    @apply flex w-full items-center gap-3 rounded-2xl px-3.5 py-3 text-left text-sm font-medium text-slate-300 transition duration-200 hover:bg-white/10 hover:text-white;
+  }
+
+  .sidebar-link-active {
+    @apply bg-white/14 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_12px_26px_rgba(15,23,42,0.24)];
   }
 }

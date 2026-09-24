@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AppToaster from "@/components/app/app-toaster";
+import BackToTopButton from "@/components/app/back-to-top-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-slate-100 antialiased`}
       >
         {children}
+        <AppToaster />
+        <BackToTopButton />
       </body>
     </html>
   );
